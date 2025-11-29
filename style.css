@@ -1,0 +1,263 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: inconsolata,monospace;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-color: #121212;
+}   
+
+header {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+    width: 100%;
+    display: flex; ;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 3%;
+    background-color: transparent;
+    
+}
+ 
+.logo{
+    font-size: 20px;
+    font-weight: 800;
+
+}
+.navlist{
+    display: flex;
+
+  
+    
+}
+.navlist a{
+   margin-left: 60px;
+   font-size: 15px;
+   font-weight: 600px;
+   border-bottom:2px solid transparent;
+   transition:all 3s ease ;
+   
+}
+
+.navlist a:hover{
+    border-bottom:2px solid #00ffff;
+    transition:all 0.3s ease ;
+   
+}
+
+
+.menu-icon{
+    color: turquoise;
+    font-size: 35px;
+    z-index: 101;
+  
+}
+
+
+.menu-toggle{
+    display: auto;
+ 
+}
+
+
+.menu-icon-1{
+    display: flex;
+    left: 10px;
+  cursor: pointer;
+}
+.hero{
+ height: 100%;
+ width: 100%;
+ background: linear-gradient(245.59deg, #2f3535 0%, #00ffd5 25%, #2f0336 100%);  
+ min-height: 100vh;
+ position: relative;
+ display: grid;
+  grid-template-columns: 1fr 1fr; 
+  align-items: center;
+  gap: 2rem;
+
+}
+section{
+    padding: 0 8%;
+}
+
+.hero-img img{
+    
+    width: 30px;
+    height: auto;
+    border-radius: 50%;
+    margin: 10% 0 0 10%;
+    transition: all 5s  linear ;    
+}
+.hero-img img:hover{
+   width: 30px;
+   height: 30px;
+   opacity:0,5
+}
+
+.hero-text h5{
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: 600; 
+}
+
+.hero-text h1 {
+    font-family: "reboto mono";
+    font-size:50px;
+    margin:0 0 30px;
+    line-height: 1;
+  
+}
+.hero-text h4{
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-weight: 800; 
+}
+
+.hero-text p{
+    font-size: 80%;
+    margin-bottom: 40px;
+    line-height: 1.9;
+}
+
+.hero-text a{
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: rgb(10, 136, 105);
+    color: #ffffff;
+    font-weight: 500;
+    line-height:1,4;
+    font-size: 14px;
+    border-radius: 30px;
+    transition: all 5s ease ;
+    text-transform: uppercase;
+
+}
+
+.hero-text a:hover{
+    background-color: transparent;
+    border: 1px  solid  white;
+    transform:translateY(8px); 
+}
+
+.hero-text a.videos{
+    background-color: transparent;
+    border: 1px  solid  white;
+  margin-left: 20px;
+}
+
+.icons{
+    position: absolute;
+    top: 50vh;
+    padding: 0 3%;
+}
+.icons i{
+    display: block;
+    margin: 26px;
+    font-size: 20px;
+    transition: all 0.5s ease;
+}
+
+.icons i:hover{
+    color: turquoise;
+    transform: translateY(-8px);
+}
+.scroll-down{
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+    background-color: #21383d; 
+} */
+
+.scroll-down i{
+    display: block;
+   padding: 12px;
+   font-size: 25px;
+   border-radius: 50px;
+   transition: all 0.5s ease;
+}
+
+
+
+.scroll-down i:hover{
+   
+    transform: translateY(-5px);
+}
+
+@media (max-width:992px){
+    section{
+        padding: 0 3%;
+        transition:  0.2s;
+    }
+    .hero-text {
+        padding-top: 0;
+    }
+    .hero-img{
+        text-align: center;
+    }
+    .hero-img img{
+        width: 200px;
+        margin: 0;
+    }
+    .hero-text{
+        font-size: 70%;
+    }
+    .icons{
+        display: none;
+    }
+    
+    .scroll-down{
+        display: none;
+    }
+
+    @media (max-width:768px) {
+        .menu-icon-action{
+            display: block;
+        }
+    }
+    .menu-icon{
+        display: block;
+    }
+    .hero-text{
+        text-align: center;
+        padding: 100px;
+    }
+  .hero-img img{
+    margin:0;
+  }
+  .hero{
+    height: 100%;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .navlist{
+    position: absolute;
+    top:100%;
+    display: flex;
+    right:-100%;
+    width:200px;
+    height:180px;
+    background-color: #0d5a72;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    transition: all 0.3s ease-out;
+
+    }
+    .navlist a{
+       
+        display: block;
+        margin:7px 0;
+    }
+    #menu-toggle:checked + label.menu-icon-action + ul{
+        right: 0;
+    }
+
+}
